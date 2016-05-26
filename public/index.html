@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <title>BPM Playlist Generator</title>
+  <style type="text/css">
+    #login, #loggedin {
+      display: none;
+    }
+    .text-overflow {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 500px;
+    }
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="login">
+    <p>To use this app, you need to be logged in to your spotify account!</p>    
+    <a href="/login">Log in with Spotify</a>
+  </div>
+  <div id="loggedin">
+    <div id="user-profile">
+      <p>Currently Logged In as <a href=""></a></p>
+    </div>
+    <p>Getting errors? Refresh here</p>
+    <button id="obtain-new-token">Obtain new token using the refresh token</button>
+  </div>
+
+  <!-- <div id="tokens">
+    <p id="access"></p>
+    <p id="refresh"></p>
+  </div> -->
+
+
+  <form action="">
+    <div>
+      <label for="warmup">How long is your warmup?</label>
+      <p><input type="number" min="0" step="1" id="warmup">minutes</p>
+    </div>
+    <div>
+      <label for="workout">How long is your workout?</label>
+      <p><input type="number" min="0" step="1" id="workout">minutes</p>
+    </div>
+    <div>
+      <label for="cooldown">How long is your cooldown?</label>
+      <p><input type="number" min="0" step="1" id="cooldown">minutes</p>
+    </div>
+    <div>
+      <label for="activity-type">What kind of exercise are you doing?</label>
+      <select name="activity" id="activity">
+        <option value="medium">Bootcamp</option>
+        <option value="fastest">Cardio Dance</option>
+        <option value="fastest">Cycling</option>
+        <option value="fast">Elliptical Machine</option>
+        <option value="fast">Jogging</option>
+        <option value="fastest">Jump Rope</option>
+        <option value="slow">Pilates</option>
+        <option value="fastest">Running</option>
+        <option value="medium">Speed Walking</option>
+        <option value="fast">Stairclimbing</option>
+        <option value="slower">Walking</option>
+        <option value="slower">Weightlifting</option>
+        <option value="slow">Yoga</option>
+      </select>
+    </div>
+    <fieldset>
+      <legend>Select Your Genres</legend>
+      <ul>
+        <li><input type="checkbox" id="pop"><label for="pop">Pop</label></li>
+        <li><input type="checkbox" id="rock"><label for="rock">Rock</label></li>
+        <li><input type="checkbox" id="rap"><label for="rap">Rap</label></li>
+        <li><input type="checkbox" id="r&b"><label for="r&b">R&B</label></li>
+        <li><input type="checkbox" id="country"><label for="country">Country</label></li>
+        <li><input type="checkbox" id="electronic"><label for="electronic">Electronic</label></li>
+        <li><input type="checkbox" id="electronica"><label for="electronica">Electronica</label></li>
+        <li><input type="checkbox" id="indie-rock"><label for="indie-rock">Indie Rock</label></li>
+        <li><input type="checkbox" id="indie-pop"><label for="indie-pop">Indie Pop</label></li>
+        <li><input type="checkbox" id="punk"><label for="punk">Punk</label></li>
+        <li><input type="checkbox" id="house"><label for="house">House</label></li>
+        <li><input type="checkbox" id="dance-pop"><label for="dance-pop">Dance Pop</label></li>
+        <li><input type="checkbox" id="dance-rock"><label for="dance-rock">Dance-Rock</label></li>
+        <li><input type="checkbox" id="hip-hop"><label for="hip-hop">Hip-Hop</label></li>
+        <li><input type="checkbox" id="glam-rock"><label for="glam-rock">Glam-Rock</label></li>
+        <li><input type="checkbox" id="classic-rock"><label for="classic rock">Classic Rock</label></li>
+        <!-- <li><input type="checkbox" id="wildcard"><label for="wildcard">Surprise Me</label></li> -->
+      </ul>
+    </fieldset>
+    <div><input type="submit" value="make me a playlist"></div>
+  </form>
+  <p class="playlistLength"></p>
+  <iframe src="" frameborder="0" allowtransparency="true" width="300" height="380"></iframe>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="scripts/bpmplaylist.js"></script>
+
+
+</body>
+</html>
+
