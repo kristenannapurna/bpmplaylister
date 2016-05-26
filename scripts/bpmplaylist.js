@@ -14,7 +14,7 @@ bpmApp.getHashParams = function(){
 bpmApp.params = bpmApp.getHashParams();
 bpmApp.access_token = bpmApp.params.access_token
 bpmApp.refresh_token = bpmApp.params.refresh_token;
-error = bpmApp.params.error;
+bpmApp.error = bpmApp.params.error;
 
 bpmApp.bpmValues = {
     slow: {min: 60,max: 120},
@@ -30,7 +30,7 @@ bpmApp.init = function(){
 }
 
 bpmApp.authenticate = function(){
-           if (error) {
+           if (bpmApp.error) {
             alert('There was an error during the authentication');
            } else {
             if (bpmApp.access_token) {
@@ -302,9 +302,5 @@ $(function(){
 
 
 
-
-(function() {
-
-})();
 
 

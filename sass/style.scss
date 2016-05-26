@@ -1,0 +1,10 @@
+ @import 'setup';
+
+ #login, #loggedin {
+      display: none;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
